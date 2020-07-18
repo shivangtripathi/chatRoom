@@ -1,0 +1,21 @@
+{
+  "name": "magcord",
+  "homepage": "http://shivangtripathi.github.io/chat-app-socket-io",
+  "version": "1.0.0",
+  "description": "dis discord",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+    },
+    "author": "",
+    "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "moment": "^2.27.0",
+    "socket.io": "^2.3.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
