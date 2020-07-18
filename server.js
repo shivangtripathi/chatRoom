@@ -1,8 +1,9 @@
+var PORT = process.env.PORT || 5000;
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io')
-const {userJoin,getCurrentUser,userLeave,getRoomUsers} = require('utils/user.js');
-const formatMessage = require( 'utils/messages.js');
+const {userJoin,getCurrentUser,userLeave,getRoomUsers} = require('./utils/user.js');
+const formatMessage = require( './utils/messages.js');
 
 const app = express();
 const server = http.createServer(app);
@@ -11,7 +12,9 @@ const io = socketio(server)
 const botName = 'Magnus Chat';
 const port = process.env.PORT || 3000;
 
-app.use(express.static('public')));
+app.use(express.static('public'));
+
+server.listen(PORT, () => console.log("Server running"));
 
 //run on connection
 io.on('connection',socket=>{
@@ -54,4 +57,4 @@ io.on('connection',socket=>{
 
 
 
-server.listen(port, () => console.log("Server running"));
+
