@@ -1,4 +1,3 @@
-const path = require('path');
 const express = require('express');
 const http = require('http');
 const socketio = require('socket.io')
@@ -10,8 +9,9 @@ const server = http.createServer(app);
 const io = socketio(server)
 
 const botName = 'Magnus Chat';
+const port = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static('public')));
 
 //run on connection
 io.on('connection',socket=>{
@@ -52,6 +52,6 @@ io.on('connection',socket=>{
 })
 
 
-const port = process.env.PORT || 3000;
+
 
 server.listen(port, () => console.log(`Server running on port ${port}`));

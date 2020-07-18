@@ -1,6 +1,5 @@
 {
   "name": "magcord",
-  "homepage": "http://shivangtripathi.github.io/chat-app-socket-io",
   "version": "1.0.0",
   "description": "dis discord",
   "main": "server.js",
